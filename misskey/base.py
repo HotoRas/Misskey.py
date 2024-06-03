@@ -25,6 +25,10 @@ class BaseMisskey(object):
     @property
     def token(self) -> Optional[str]:
         return self._token
+    
+    @token.setter
+    def token(self, value: str) -> None:
+        self._token = value
 
     def __init__(
         self, *,
@@ -57,6 +61,13 @@ class BaseMisskey(object):
         self, *,
         endpoint: str,
         params: Optional[dict] = None,
+        **kwargs
+    ) -> Any:
+        raise NotImplementedError()
+
+    def api_call(
+        self, *,
+        endpoint: str,
         **kwargs
     ) -> Any:
         raise NotImplementedError()

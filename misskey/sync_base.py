@@ -30,6 +30,17 @@ class Misskey(BaseMisskey):
             self.session = requests.Session()
         else:
             self.session = session
+            
+    def api_call(
+        self, *,
+        endpoint: str,
+        **kwargs
+    ) -> Any:
+        return self._api_request(
+            method=HttpMethodEnum.POST,
+            endpoint="/api/" + endpoint,
+            params=kwargs
+        )
 
     def _api_request(
         self, *,
