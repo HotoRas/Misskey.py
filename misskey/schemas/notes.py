@@ -94,7 +94,11 @@ class NoteSchema(Schema):
     local_only = fields.Boolean(data_key="localOnly")
     reaction_acceptance = fields.Enum(
         ReactionAcceptanceEnum,
-        required=True, data_key="reactionAcceptance", allow_none=True)
+        by_value=True,
+        required=True,
+        data_key="reactionAcceptance",
+        allow_none=True
+    )
     # reactions = fields.Nested(...  # TODO: TBD
     renote_count = fields.Integer(required=True, data_key="renoteCount")
     replies_count = fields.Integer(required=True, data_key="repliesCount")
