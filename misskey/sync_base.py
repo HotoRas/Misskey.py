@@ -30,7 +30,7 @@ class Misskey(BaseMisskey):
             self.session = requests.Session()
         else:
             self.session = session
-            
+
     def api_call(
         self, *,
         endpoint: str,

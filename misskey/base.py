@@ -25,7 +25,7 @@ class BaseMisskey(object):
     @property
     def token(self) -> Optional[str]:
         return self._token
-    
+
     @token.setter
     def token(self, value: str) -> None:
         self._token = value
