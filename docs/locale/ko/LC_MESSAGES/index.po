@@ -1,9 +1,10 @@
 # Misskey.py documentation i18n file
 # Copyright (C) 2019-2023 YuzuRyo61
+# Copyleft (C) 2024 HotoRas
 # This file is distributed under the same license as the Misskey.py package.
 # YuzuRyo61 <yuzuryo61@yuzulia.work>, 2023.
 
-# TODO: 試験中のため変更される場合があります
+# TODO: Testing period- contents might change
 
 msgid ""
 msgstr ""
